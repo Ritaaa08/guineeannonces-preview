@@ -334,15 +334,205 @@ footer{background:#1a1a1a;color:#9e9e9e;padding:42px 24px 24px;margin-top:48px}
 @media(max-width:1200px){.cat-grid-olx{grid-template-columns:repeat(5,1fr)}}
 @media(max-width:900px){
   .ads-grid{grid-template-columns:repeat(2,1fr)}
-  .cat-grid-olx{grid-template-columns:repeat(3,1fr)}
+  .cat-grid-olx{grid-template-columns:repeat(4,1fr)}
   .cat-grid-small{grid-template-columns:repeat(3,1fr)}
   .listings-layout{grid-template-columns:1fr}
   .filters{position:static}
   .detail-layout{grid-template-columns:1fr}
+  .seller-card{position:static}
   .footer-grid{grid-template-columns:repeat(2,1fr)}
   .plan-cards{grid-template-columns:1fr}
   .cat-select-grid{grid-template-columns:repeat(2,1fr)}
   .form-row{grid-template-columns:1fr}
+  .hero h1{font-size:28px}
+}
+
+/* ============ TABLETTES / MOBILES ≤ 720px ============ */
+@media(max-width:720px){
+  body{font-size:14px}
+
+  /* NAV : logo + boutons en haut, recherche pleine largeur en dessous */
+  nav{position:sticky;top:0}
+  .nav-inner{height:auto;min-height:56px;padding:10px 12px;flex-wrap:wrap;gap:8px;row-gap:10px}
+  .logo-text{font-size:18px}
+  .search-wrap{order:3;flex-basis:100%;max-width:none;height:40px;border-width:1px}
+  .search-wrap select{display:none}
+  .search-wrap input{font-size:14px;padding:0 12px}
+  .search-wrap button{padding:0 14px}
+  .nav-right{margin-left:auto;gap:6px}
+  .btn-ghost{padding:7px 10px;font-size:12px}
+  .btn-ghost svg{width:14px;height:14px}
+  .btn-post{padding:8px 12px;font-size:12px}
+
+  /* BREADCRUMB */
+  .breadcrumb{padding:0 12px}
+  .bc{padding:8px 0;font-size:12px;flex-wrap:wrap}
+
+  /* HERO */
+  .hero{padding:32px 16px 28px}
+  .hero h1{font-size:22px;line-height:1.25;margin-bottom:6px}
+  .hero p{font-size:13px;margin-bottom:18px;padding:0 4px}
+  .hero-search{flex-direction:column;height:auto;border-radius:8px;padding:6px;gap:4px}
+  .hero-search input,.hero-search select,.hero-search button{width:100%;height:44px;border-left:none;border-radius:6px;padding:0 14px;font-size:14px}
+  .hero-search select{border-top:1px solid var(--gray-200)}
+  .hero-search button{padding:0;font-weight:700}
+  .hero-stats{flex-direction:column;gap:8px;margin-top:18px;align-items:center}
+  .hero-stat{font-size:13px}
+  .hero-stat strong{font-size:16px}
+
+  /* SECTIONS */
+  .section{padding:22px 12px}
+  .sec-head{margin-bottom:14px}
+  .sec-title{font-size:16px;gap:8px}
+  .sec-title-bar{height:18px}
+  .see-all{font-size:12px}
+
+  /* CATÉGORIES — 3 colonnes + cercles plus petits */
+  .cat-grid-olx{grid-template-columns:repeat(3,1fr);gap:8px}
+  .cat-item{padding:10px 4px}
+  .cat-circle{width:64px;height:64px;margin-bottom:8px}
+  .cat-emoji{font-size:36px}
+  .cat-label{font-size:11px;min-height:28px}
+  .cat-grid-small{grid-template-columns:repeat(2,1fr);gap:10px}
+  .cat-card-small{padding:14px 10px}
+  .cat-card-small .cat-circle{width:58px;height:58px}
+  .cat-card-small .cat-emoji{font-size:32px}
+  .cat-card-small .cat-name{font-size:12px}
+  .cat-card-small .cat-count{font-size:11px}
+
+  /* GRID D'ANNONCES */
+  .ads-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .ad-img{height:130px}
+  .ad-body{padding:10px}
+  .ad-price{font-size:14px}
+  .ad-title{font-size:12px}
+  .ad-meta{font-size:11px;gap:6px;margin-top:6px}
+  .ad-badge{font-size:10px;padding:2px 6px;top:8px;left:8px}
+  .ad-fav{width:28px;height:28px;top:8px;right:8px}
+  .ad-fav svg{width:14px;height:14px}
+
+  /* HUB CATÉGORIE */
+  .cat-hero-inner{padding:14px 12px}
+  .cat-hero-title{font-size:20px;gap:10px}
+  .cat-hero-circle{width:44px;height:44px}
+  .cat-hero-circle .cat-emoji{font-size:26px}
+  .cat-hero-count{font-size:13px}
+  .subcats{gap:6px;margin-top:12px}
+  .subcat{padding:6px 14px;font-size:12px}
+
+  /* LISTINGS */
+  .listings-layout{padding:16px 12px;gap:14px}
+  .filters-header{padding:14px}
+  .filter-sec{padding:14px}
+  .list-card{flex-direction:column}
+  .list-img{width:100%;min-width:0;height:200px}
+  .list-body{padding:14px}
+  .list-title{font-size:15px}
+  .list-desc{font-size:12px}
+  .list-price{font-size:18px;margin-top:8px}
+  .list-meta{flex-wrap:wrap;gap:10px;font-size:11px}
+  .listings-head{flex-direction:column;align-items:flex-start;gap:8px}
+  .sort-sel{width:100%}
+
+  /* DÉTAIL ANNONCE */
+  .detail-layout{padding:16px 12px;gap:14px}
+  .gallery-main{height:260px}
+  .gallery-thumbs{padding:8px}
+  .g-thumb{width:64px;min-width:64px;height:48px}
+  .detail-card{padding:16px}
+  .detail-price{font-size:24px}
+  .detail-title{font-size:17px;margin:6px 0 12px}
+  .detail-meta{flex-wrap:wrap;gap:8px;font-size:12px}
+  .detail-sec-title{font-size:14px}
+  .features{grid-template-columns:1fr}
+  .seller-card{padding:16px}
+  .seller-price-big{font-size:22px}
+  .btn-call,.btn-msg{padding:12px;font-size:14px}
+  .map-placeholder{height:140px}
+
+  /* PROMO */
+  .promo{flex-direction:column;text-align:center;gap:14px;padding:18px 16px;margin-bottom:20px}
+  .promo h3{font-size:16px}
+  .promo p{font-size:12px}
+  .promo-btn{padding:10px 18px;font-size:13px}
+
+  /* DÉPÔT D'ANNONCE */
+  .post-header{padding:0 12px}
+  .post-header-inner{padding:16px 0}
+  .post-title{font-size:19px}
+  .post-subtitle{font-size:13px}
+  .steps-bar{flex-wrap:wrap;gap:6px;row-gap:10px;margin-top:16px}
+  .step-item{flex:none;flex-basis:calc(50% - 3px);gap:6px}
+  .step-line{display:none}
+  .step-label{font-size:12px}
+  .post-body{padding:20px 12px}
+  .cat-select-grid{grid-template-columns:1fr;gap:10px}
+  .cat-select-item{padding:12px;gap:12px}
+  .cat-select-circle{width:52px;height:52px}
+  .cat-select-circle .cat-emoji{font-size:28px}
+  .subcats-select{grid-template-columns:1fr;gap:8px}
+  .form-group{margin-bottom:18px}
+  .form-label{font-size:12px}
+  .form-input,.form-textarea,.form-select{padding:11px 12px;font-size:14px}
+  .condition-options{flex-direction:column;gap:8px}
+  .condition-opt{width:100%;justify-content:center}
+  .plan-cards{grid-template-columns:1fr;gap:12px}
+  .review-grid{grid-template-columns:1fr;padding:14px;gap:14px}
+  .review-img{width:100%;height:180px}
+  .review-title{font-size:16px}
+  .review-price{font-size:19px}
+  .photo-upload-area{padding:26px 16px}
+  .photos-preview{gap:8px}
+  .photo-preview-item,.photo-preview-img,.photo-add-btn{width:86px;height:86px}
+
+  .form-actions{flex-direction:column-reverse;gap:10px;align-items:stretch}
+  .btn-back,.btn-next,.btn-publish{width:100%;justify-content:center;padding:13px 20px}
+
+  .success-wrap{padding:36px 16px}
+  .success-icon{width:64px;height:64px}
+  .success-title{font-size:21px}
+  .success-sub{font-size:14px}
+  .success-actions{flex-direction:column;gap:10px}
+  .btn-green,.btn-purple-outline{width:100%}
+
+  /* FOOTER */
+  footer{padding:28px 16px 20px;margin-top:32px}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:20px;padding-top:20px;margin-bottom:20px}
+  .footer-col h4{font-size:12px;margin-bottom:10px}
+  .footer-col a{font-size:12px;margin-bottom:7px}
+  .footer-bottom{flex-direction:column;gap:6px;text-align:center;font-size:11px}
+}
+
+/* ============ TÉLÉPHONES ≤ 480px ============ */
+@media(max-width:480px){
+  .logo-text{font-size:16px}
+  .btn-ghost{padding:6px 8px;font-size:0;gap:0;border-width:1px}
+  .btn-ghost svg{width:16px;height:16px}
+  .btn-post{padding:7px 10px;font-size:12px}
+  .btn-post svg{width:13px;height:13px}
+
+  .hero{padding:26px 14px 22px}
+  .hero h1{font-size:20px}
+  .hero p{font-size:12px}
+
+  .cat-grid-olx{grid-template-columns:repeat(3,1fr)}
+  .cat-circle{width:58px;height:58px;margin-bottom:6px}
+  .cat-emoji{font-size:32px}
+
+  .ads-grid{grid-template-columns:1fr;gap:12px}
+  .ad-img{height:200px}
+  .ad-price{font-size:16px}
+  .ad-title{font-size:13px;white-space:normal}
+
+  .cat-grid-small{grid-template-columns:repeat(2,1fr)}
+
+  .gallery-main{height:220px}
+  .footer-grid{grid-template-columns:1fr}
+
+  .step-label{display:none}
+  .step-item{flex:1 1 auto;flex-basis:auto}
+  .steps-bar{justify-content:space-between;flex-wrap:nowrap}
+  .step-line{display:block;height:2px}
 }
 </style>
 </head>
@@ -398,7 +588,7 @@ footer{background:#1a1a1a;color:#9e9e9e;padding:42px 24px 24px;margin-top:48px}
     </div>
 
     <div class="cat-grid-olx">
-      <div class="cat-item">
+      <div class="cat-item" onclick="goTo('voitures')">
         <div class="cat-circle bg-yellow"><span class="cat-emoji">🚗</span></div>
         <div class="cat-label">Voitures,<br>motos et bateaux</div>
       </div>
@@ -516,8 +706,8 @@ footer{background:#1a1a1a;color:#9e9e9e;padding:42px 24px 24px;margin-top:48px}
           <div class="ad-fav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="var(--gray-500)" stroke-width="1.8"/></svg></div>
         </div>
         <div class="ad-body">
-          <div class="ad-price">42 000 000 GNF</div>
-          <div class="ad-title">Toyota Corolla 2019 — Très bon état</div>
+          <div class="ad-price">11169 522 000 GNF</div>
+          <div class="ad-title">Nissan GTR — Liberty Walk</div>
           <div class="ad-meta"><span>Conakry</span><span>Aujourd'hui</span></div>
         </div>
       </div>
@@ -527,8 +717,8 @@ footer{background:#1a1a1a;color:#9e9e9e;padding:42px 24px 24px;margin-top:48px}
           <div class="ad-fav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="var(--gray-500)" stroke-width="1.8"/></svg></div>
         </div>
         <div class="ad-body">
-          <div class="ad-price">78 500 000 GNF</div>
-          <div class="ad-title">Toyota Hilux 4x4 2021 — Diesel</div>
+          <div class="ad-price">800 500 000 GNF</div>
+          <div class="ad-title">Ford Explorer — Hybride</div>
           <div class="ad-meta"><span>Kindia</span><span>Hier</span></div>
         </div>
       </div>
@@ -538,8 +728,8 @@ footer{background:#1a1a1a;color:#9e9e9e;padding:42px 24px 24px;margin-top:48px}
           <div class="ad-fav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="var(--gray-500)" stroke-width="1.8"/></svg></div>
         </div>
         <div class="ad-body">
-          <div class="ad-price">8 500 000 GNF</div>
-          <div class="ad-title">Honda CBF 125 — 2022, faible kilométrage</div>
+          <div class="ad-price">402 102 792 GNF</div>
+          <div class="ad-title">Chevrolet Camaro — 2016, faible kilométrage</div>
           <div class="ad-meta"><span>Conakry</span><span>2 jours</span></div>
         </div>
       </div>
@@ -550,8 +740,8 @@ footer{background:#1a1a1a;color:#9e9e9e;padding:42px 24px 24px;margin-top:48px}
           <div class="ad-fav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="var(--gray-500)" stroke-width="1.8"/></svg></div>
         </div>
         <div class="ad-body">
-          <div class="ad-price">25 000 000 GNF</div>
-          <div class="ad-title">Hyundai Accent 2017 — Climatisation</div>
+          <div class="ad-price">111 111 000 000 GNF</div>
+          <div class="ad-title">Mustang Shelby — Pack Carbone</div>
           <div class="ad-meta"><span>Conakry</span><span>4 jours</span></div>
         </div>
       </div>
@@ -739,6 +929,203 @@ footer{background:#1a1a1a;color:#9e9e9e;padding:42px 24px 24px;margin-top:48px}
   <footer><div class="footer-inner"><div class="footer-bottom"><span>© 2026 GuinéeAnnonces</span><span>Conakry, Guinée</span></div></div></footer>
 </div>
 
+<!-- PAGE VOITURES (hub catégorie) -->
+<div id="page-voitures" class="page">
+  <div class="breadcrumb"><div class="bc"><a onclick="goTo('home')">Accueil</a><span class="bc-sep">›</span><strong>Voitures, motos et bateaux</strong></div></div>
+  <div class="cat-hero">
+    <div class="cat-hero-inner">
+      <div class="cat-hero-title">
+        <div class="cat-hero-circle bg-yellow"><span class="cat-emoji">🚗</span></div>
+        Voitures, motos et bateaux
+      </div>
+      <div class="cat-hero-count">3 205 annonces en Guinée</div>
+      <div class="subcats">
+        <div class="subcat active" onclick="goTo('voitures-list')">Voitures</div>
+        <div class="subcat" onclick="goTo('voitures-list')">Motos &amp; Scooters</div>
+        <div class="subcat" onclick="goTo('voitures-list')">Camions &amp; Utilitaires</div>
+        <div class="subcat" onclick="goTo('voitures-list')">Pièces détachées</div>
+        <div class="subcat" onclick="goTo('voitures-list')">Bateaux</div>
+        <div class="subcat" onclick="goTo('voitures-list')">Engins agricoles</div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="sec-head"><div class="sec-title"><div class="sec-title-bar"></div>Sous-catégories</div></div>
+    <div class="cat-grid-small" style="grid-template-columns:repeat(4,1fr);margin-bottom:32px">
+      <div class="cat-card-small" onclick="goTo('voitures-list')">
+        <div class="cat-circle bg-yellow"><span class="cat-emoji">🚗</span></div>
+        <div><div class="cat-name">Voitures</div><div class="cat-count">2 142 annonces</div></div>
+      </div>
+      <div class="cat-card-small" onclick="goTo('voitures-list')">
+        <div class="cat-circle bg-red"><span class="cat-emoji">🏍️</span></div>
+        <div><div class="cat-name">Motos &amp; Scooters</div><div class="cat-count">634 annonces</div></div>
+      </div>
+      <div class="cat-card-small" onclick="goTo('voitures-list')">
+        <div class="cat-circle bg-orange-pastel"><span class="cat-emoji">🚚</span></div>
+        <div><div class="cat-name">Camions</div><div class="cat-count">218 annonces</div></div>
+      </div>
+      <div class="cat-card-small" onclick="goTo('voitures-list')">
+        <div class="cat-circle bg-cyan"><span class="cat-emoji">⛵</span></div>
+        <div><div class="cat-name">Bateaux</div><div class="cat-count">87 annonces</div></div>
+      </div>
+    </div>
+    <div class="sec-head"><div class="sec-title"><div class="sec-title-bar"></div>Annonces récentes</div><div class="see-all" onclick="goTo('voitures-list')">Voir tout <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="var(--purple)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div>
+    <div class="ads-grid">
+      <div class="ad-card" onclick="goTo('annonce')"><div class="ad-img-wrap"><img class="ad-img" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&amp;q=80" alt=""><div class="ad-badge badge-top">TOP</div><div class="ad-fav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="var(--gray-500)" stroke-width="1.8"/></svg></div></div><div class="ad-body"><div style="font-size:11px;color:var(--purple);font-weight:700;text-transform:uppercase;margin-bottom:4px">Voiture</div><div class="ad-price">401 000 000 GNF</div><div class="ad-title">Chevrolet Camaro — 2016</div><div class="ad-meta"><span>Conakry</span><span>Aujourd'hui</span></div></div></div>
+      <div class="ad-card" onclick="goTo('annonce')"><div class="ad-img-wrap"><img class="ad-img" src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=400&amp;q=80" alt=""><div class="ad-fav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="var(--gray-500)" stroke-width="1.8"/></svg></div></div><div class="ad-body"><div style="font-size:11px;color:var(--purple);font-weight:700;text-transform:uppercase;margin-bottom:4px">Voiture</div><div class="ad-price">892 000 000 GNF</div><div class="ad-title">BMW M4</div><div class="ad-meta"><span>Ratoma</span><span>Hier</span></div></div></div>
+      <div class="ad-card" onclick="goTo('annonce')"><div class="ad-img-wrap"><img class="ad-img" src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=400&amp;q=80" alt=""><div class="ad-badge badge-urgent">URGENT</div><div class="ad-fav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="var(--gray-500)" stroke-width="1.8"/></svg></div></div><div class="ad-body"><div style="font-size:11px;color:var(--purple);font-weight:700;text-transform:uppercase;margin-bottom:4px">Moto</div><div class="ad-price">72 500 000 GNF</div><div class="ad-title">SUZUKI BANDIT</div><div class="ad-meta"><span>Matoto</span><span>3 jours</span></div></div></div>
+      <div class="ad-card" onclick="goTo('annonce')"><div class="ad-img-wrap"><img class="ad-img" src="https://images.unsplash.com/photo-1566473179817-c99ecd27aee9?w=400&amp;q=80" alt=""><div class="ad-fav"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="var(--gray-500)" stroke-width="1.8"/></svg></div></div><div class="ad-body"><div style="font-size:11px;color:var(--purple);font-weight:700;text-transform:uppercase;margin-bottom:4px">Camion</div><div class="ad-price">300 000 000 GNF</div><div class="ad-title">IVECO 3,5T — benne</div><div class="ad-meta"><span>Kindia</span><span>5 jours</span></div></div></div>
+    </div>
+    <div style="margin-top:28px"><div class="sec-head"><div class="sec-title"><div class="sec-title-bar"></div>Recherches fréquentes</div></div><div><span class="chip" onclick="goTo('voitures-list')">Toyota Corolla</span><span class="chip" onclick="goTo('voitures-list')">Pickup 4x4</span><span class="chip" onclick="goTo('voitures-list')">Moto 125cc</span><span class="chip" onclick="goTo('voitures-list')">Mercedes Conakry</span><span class="chip" onclick="goTo('voitures-list')">Voiture occasion</span><span class="chip" onclick="goTo('voitures-list')">Yamaha scooter</span><span class="chip" onclick="goTo('voitures-list')">Pièces Peugeot</span><span class="chip" onclick="goTo('voitures-list')">Bateau pêche</span></div></div>
+  </div>
+  <footer><div class="footer-inner"><div class="footer-bottom"><span>© 2026 GuinéeAnnonces</span><span>Conakry, Guinée</span></div></div></footer>
+</div>
+
+<!-- PAGE VOITURES LIST (liste avec filtres) -->
+<div id="page-voitures-list" class="page">
+  <div class="breadcrumb"><div class="bc"><a onclick="goTo('home')">Accueil</a><span class="bc-sep">›</span><a onclick="goTo('voitures')">Voitures, motos et bateaux</a><span class="bc-sep">›</span><strong>Voitures</strong></div></div>
+  <div class="listings-layout">
+    <div class="filters">
+      <div class="filters-header"><span class="filters-title">Filtres</span><span class="filters-reset">Réinitialiser</span></div>
+      <div class="filter-sec">
+        <div class="filter-sec-title">Localisation</div>
+        <div class="filter-opt"><input type="checkbox" checked><span>Conakry</span><span class="filter-opt-count">1 420</span></div>
+        <div class="filter-opt"><input type="checkbox"><span>Kindia</span><span class="filter-opt-count">186</span></div>
+        <div class="filter-opt"><input type="checkbox"><span>Kankan</span><span class="filter-opt-count">124</span></div>
+        <div class="filter-opt"><input type="checkbox"><span>Labé</span><span class="filter-opt-count">92</span></div>
+        <div class="filter-opt"><input type="checkbox"><span>Nzérékoré</span><span class="filter-opt-count">58</span></div>
+      </div>
+      <div class="filter-sec">
+        <div class="filter-sec-title">Prix (GNF)</div>
+        <div class="price-row"><input type="number" placeholder="Minimum"><input type="number" placeholder="Maximum"></div>
+        <button class="filter-apply">Appliquer</button>
+      </div>
+      <div class="filter-sec">
+        <div class="filter-sec-title">Marque</div>
+        <div class="filter-opt"><input type="checkbox" checked><span>Toyota</span><span class="filter-opt-count">612</span></div>
+        <div class="filter-opt"><input type="checkbox"><span>Hyundai</span><span class="filter-opt-count">284</span></div>
+        <div class="filter-opt"><input type="checkbox"><span>Nissan</span><span class="filter-opt-count">221</span></div>
+        <div class="filter-opt"><input type="checkbox"><span>Mercedes</span><span class="filter-opt-count">178</span></div>
+        <div class="filter-opt"><input type="checkbox"><span>Peugeot</span><span class="filter-opt-count">142</span></div>
+        <div class="filter-opt"><input type="checkbox"><span>Kia</span><span class="filter-opt-count">118</span></div>
+      </div>
+      <div class="filter-sec">
+        <div class="filter-sec-title">Année</div>
+        <div class="price-row"><input type="number" placeholder="De"><input type="number" placeholder="À"></div>
+      </div>
+      <div class="filter-sec">
+        <div class="filter-sec-title">Carburant</div>
+        <div class="filter-opt"><input type="checkbox" checked><span>Essence</span></div>
+        <div class="filter-opt"><input type="checkbox" checked><span>Diesel</span></div>
+        <div class="filter-opt"><input type="checkbox"><span>Hybride</span></div>
+        <div class="filter-opt"><input type="checkbox"><span>Électrique</span></div>
+      </div>
+      <div class="filter-sec">
+        <div class="filter-sec-title">Boîte de vitesses</div>
+        <div class="filter-opt"><input type="checkbox"><span>Manuelle</span></div>
+        <div class="filter-opt"><input type="checkbox" checked><span>Automatique</span></div>
+      </div>
+      <div class="filter-sec">
+        <div class="filter-sec-title">Kilométrage</div>
+        <div class="price-row"><input type="number" placeholder="Min km"><input type="number" placeholder="Max km"></div>
+      </div>
+    </div>
+    <div>
+      <div class="listings-head">
+        <div class="listings-count"><strong>2 142</strong> voitures trouvées</div>
+        <select class="sort-sel"><option>Plus récents</option><option>Prix croissant</option><option>Prix décroissant</option><option>Kilométrage</option></select>
+      </div>
+      <div class="ads-list">
+        <div class="list-card" onclick="goTo('annonce')">
+          <img class="list-img" src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&amp;q=80" alt="">
+          <div class="list-body">
+            <div>
+              <div><span class="list-badge badge-top">TOP</span></div>
+              <div class="list-title">Toyota Land Cruiser V8 — 2019, 45 000 km</div>
+              <div class="list-desc">SUV haut de gamme, première main, entretien complet chez concessionnaire. Cuir, GPS, caméra de recul, toit ouvrant. Climatisation 4 zones, jantes alu 20".</div>
+            </div>
+            <div>
+              <div class="list-price">185 000 000 GNF</div>
+              <div class="list-meta">
+                <span><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="var(--gray-500)" stroke-width="2"/><circle cx="12" cy="10" r="3" stroke="var(--gray-500)" stroke-width="2"/></svg>Kaloum, Conakry</span>
+                <span>Diesel</span><span>Automatique</span><span>45 000 km</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list-card" onclick="goTo('annonce')">
+          <img class="list-img" src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=400&amp;q=80" alt="">
+          <div class="list-body">
+            <div>
+              <div class="list-title">Toyota Corolla 2015 — essence, très bon état</div>
+              <div class="list-desc">Berline fiable et économique, entretien régulier, pneus neufs. Climatisation, direction assistée, vitres électriques. Idéale ville et longs trajets.</div>
+            </div>
+            <div>
+              <div class="list-price">42 000 000 GNF</div>
+              <div class="list-meta"><span>Ratoma, Conakry</span><span>Essence</span><span>Manuelle</span><span>98 000 km</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="list-card" onclick="goTo('annonce')">
+          <img class="list-img" src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?w=400&amp;q=80" alt="">
+          <div class="list-body">
+            <div>
+              <div><span class="list-badge badge-urgent">URGENT</span></div>
+              <div class="list-title">Hyundai Tucson 2018 — 4x4, full options</div>
+              <div class="list-desc">SUV compact, très bien entretenu. GPS, caméra recul, sièges chauffants, Bluetooth. Pneus récents, vidange à jour. Vente pour départ à l'étranger.</div>
+            </div>
+            <div>
+              <div class="list-price">78 000 000 GNF</div>
+              <div class="list-meta"><span>Dixinn, Conakry</span><span>Diesel</span><span>Automatique</span><span>72 000 km</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="list-card" onclick="goTo('annonce')">
+          <img class="list-img" src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=400&amp;q=80" alt="">
+          <div class="list-body">
+            <div>
+              <div class="list-title">Yamaha YBR 125 — 2022, faible kilométrage</div>
+              <div class="list-desc">Moto économique et fiable, parfaite pour la ville. Entretien suivi, papiers en règle, 2 casques inclus. Peu roulé, toujours garée au garage.</div>
+            </div>
+            <div>
+              <div class="list-price">8 500 000 GNF</div>
+              <div class="list-meta"><span>Matoto, Conakry</span><span>Essence</span><span>Manuelle</span><span>6 200 km</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="list-card" onclick="goTo('annonce')">
+          <img class="list-img" src="https://images.unsplash.com/photo-1566473179817-c99ecd27aee9?w=400&amp;q=80" alt="">
+          <div class="list-body">
+            <div>
+              <div class="list-title">Mitsubishi Canter 3,5T — benne basculante</div>
+              <div class="list-desc">Camion utilitaire, benne hydraulique en parfait état. Idéal chantier ou transport de matériaux. Moteur révisé, embrayage neuf, 4 pneus neufs.</div>
+            </div>
+            <div>
+              <div class="list-price">72 000 000 GNF</div>
+              <div class="list-meta"><span>Kindia</span><span>Diesel</span><span>Manuelle</span><span>186 000 km</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="list-card" onclick="goTo('annonce')">
+          <img class="list-img" src="https://images.unsplash.com/photo-1606611013016-969c19ba27bb?w=400&amp;q=80" alt="">
+          <div class="list-body">
+            <div>
+              <div class="list-title">Mercedes Classe C 220d — 2017, cuir</div>
+              <div class="list-desc">Berline premium, intérieur cuir, écran tactile, assistants de conduite. Entretien Mercedes à jour, carnet complet. Très élégante, conduite souple.</div>
+            </div>
+            <div>
+              <div class="list-price">125 000 000 GNF</div>
+              <div class="list-meta"><span>Kaloum, Conakry</span><span>Diesel</span><span>Automatique</span><span>88 000 km</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pagination"><div class="pg-btn active">1</div><div class="pg-btn">2</div><div class="pg-btn">3</div><div class="pg-btn">4</div><div class="pg-btn">›</div></div>
+    </div>
+  </div>
+  <footer><div class="footer-inner"><div class="footer-bottom"><span>© 2026 GuinéeAnnonces</span><span>Conakry, Guinée</span></div></div></footer>
+</div>
+
 <!-- PAGE ANNONCE -->
 <div id="page-annonce" class="page">
   <div class="breadcrumb"><div class="bc"><a onclick="goTo('home')">Accueil</a><span class="bc-sep">›</span><a onclick="goTo('immo')">Immobilier</a><span class="bc-sep">›</span><a onclick="goTo('apparts')">Appartements</a><span class="bc-sep">›</span><strong>Appartement 3 chambres — Kaloum</strong></div></div>
@@ -749,7 +1136,7 @@ footer{background:#1a1a1a;color:#9e9e9e;padding:42px 24px 24px;margin-top:48px}
         <div class="gallery-thumbs">
           <img class="g-thumb active" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=200&q=80" onclick="changePhoto(this,'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=85')" alt="">
           <img class="g-thumb" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=200&q=80" onclick="changePhoto(this,'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=900&q=85')" alt="">
-          <img class="g-thumb" src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=200&q=80" onclick="changePhoto(this,'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=85')" alt="">
+          <img class="g-thumb" src="https://images.unsplash.com/photo-1606787620819-8bdf0c44c293?w=200&q=80" onclick="changePhoto(this,'https://images.unsplash.com/photo-1606787620819-8bdf0c44c293?w=900&q=85')" alt="">
           <img class="g-thumb" src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=200&q=80" onclick="changePhoto(this,'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&q=85')" alt="">
           <img class="g-thumb" src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=200&q=80" onclick="changePhoto(this,'https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=900&q=85')" alt="">
         </div>
